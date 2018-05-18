@@ -26,6 +26,13 @@ $(function() {
 			$(".historyTab .history-tab").removeClass("history-active").eq($(this).index()).addClass("history-active");
 			$(".history-tab__item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("history-active");
+
+	// MEDIA Tabs
+	$(".media__item").not(":first").hide();
+	$(".galleryMedia .media__tab").click(function() {
+			$(".galleryMedia .media__tab").removeClass("media__active").eq($(this).index()).addClass("media__active");
+			$(".media__item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("media__active");
 });
 
 
