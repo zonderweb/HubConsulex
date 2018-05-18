@@ -1,0 +1,56 @@
+.advert {
+	padding: 85px 0px 90px 0px;
+	background: $accent;
+	color: $white;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include sm-block {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__block {
+		@include bmd-block {
+			width: 60%;
+		}
+		@include sm-block {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		font-size: 37px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: $title-font;
+	} 
+
+	&__description {
+		font-size: 15px;
+		line-height: 1.2em;
+	}
+
+	&__link {
+		color: #2c3035;
+		text-transform: uppercase;
+		font-family: $title-font;
+		font-weight: bold;
+		background: $white;
+		padding: 20px 45px 15px 45px;
+		border-radius: 30px;
+		font-size: 14px;
+		display: inline-block;
+		@include bmd-block {
+			margin: 0 auto;
+		}
+
+		&:hover {
+			color: #2c3035;
+			text-decoration: none;
+		}
+	}
+}

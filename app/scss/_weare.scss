@@ -1,0 +1,221 @@
+.weare {
+	padding-bottom: 140px;
+
+	&__grid {
+		@include row-flex;
+		justify-content: center;
+	}
+
+	&__left {
+		@include col();
+		@include size(8);
+		@include size-md(6);
+		@include size-sm(12);
+		padding-right: 30px;
+		@include sm-block {
+			padding-right: 0;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__header {
+		padding-bottom: 35px;
+		position: relative;
+		margin-bottom: 60px;
+		@include sm-block {
+			text-align: center;
+		}
+
+		&::after {
+			content: '';
+			width: 30px;
+			height: 2px;
+			background: $accent;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			@include sm-block {
+				left: 47%;
+			}
+		}
+	}
+
+	&__title {
+		color: $header;
+		margin-bottom: 40px;
+	}
+
+	&__description {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	&__right {
+		@include size(4);
+		@include size-md(6);
+		@include size-sm(12);
+		padding-left: 23px;
+
+		@include sm-block {
+			padding-left: 0;
+		}
+	}
+}
+
+.quick-quote {
+	border: 2px solid $accent;
+
+	&__header {
+		color: $white;
+		background: $accent;
+		text-align: center;
+		padding: 30px 55px;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 24px;
+		font-family: $title-font;
+		margin-bottom: 15px;
+	}
+
+	&__description {
+		font-size: 13px;
+		line-height: 20px;
+	}
+}
+
+.quick-quote {
+	&__body {
+		padding: 60px 30px 40px 30px;
+		text-align: center;
+	}
+}
+
+.inpt,
+.btn__submit {
+	display: block;
+	width: 100%;
+}
+
+.inpt {
+	margin-bottom: 20px;
+	border: 1px solid #f4f4f4;
+	background: #f9f9f9;
+	padding: 15px 10px;
+	font-size: 13px;
+	color: #a9a9a9;
+
+	&::placeholder {
+		color: #a9a9a9;
+	}
+
+	&__textarea {
+		margin-bottom: 40px;
+	}
+}
+
+.btn__submit {
+	background: $accent;
+	border: none;
+	color: $white;
+	text-transform: uppercase;
+	font-family: $title-font;
+	font-size: 14px;
+	line-height: 24px;
+	padding-top: 15px;
+	padding-bottom: 12px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+// TABS
+
+.tabs {
+	width: 100%;
+	border-bottom: 1px solid #e8e8e8;
+	cursor: pointer;
+	margin-bottom: 35px;
+
+	@include md-block {
+		border-bottom: none;
+	}
+}
+
+.tab	{
+	display: inline-block;
+	font-family: $title-font;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-right: 1px solid #e8e8e8;
+	margin-bottom: 10px;
+	cursor: pointer;
+	color: #bebebe;
+
+	@include md-block {
+		display: block;
+		margin-bottom: 20px;
+		padding-left: 0;
+		padding-right: 0;
+		border-right: none;
+		margin-bottom: 40px;
+		margin-top: 40px;
+		text-align: center;
+	}
+
+	&:hover {
+		color: $accent;
+	}
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		border-right: none;
+	}
+}
+
+.active {
+	color: $accent;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: $accent;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		bottom: -10px;
+	}
+}
+
+.tab_item {
+	p {
+		color: #525252;
+		font-size: 14px;
+		line-height: 30px;
+	}
+}
+
+.tab__link {
+	display: inline-block;
+	background: $accent;
+	color: $white;
+	text-transform: uppercase;
+	font-family: $title-font;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 15px 28px;
+	border-radius: 30px;
+	margin-top: 45px;
+
+	&:hover {
+		text-decoration: none;
+		color: $white;
+	}
+}

@@ -1,0 +1,174 @@
+.meatTeam {
+	background: #f4f4f4;
+	padding-top: 130px;
+	padding-bottom: 130px;
+}
+
+.meatTeam__header {
+	@include xs-block {
+		max-width: 100%;
+	}
+}
+
+.meatTeam__header {
+	margin-bottom: 80px;
+}
+
+
+.team-tab__tabs {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 65px;
+}
+
+.team-tab__tab {
+	margin-right: 5px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.team-tab__tab {
+	opacity: .4;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.workerName {
+	color: #2c333d;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: $title-font;
+	margin-bottom: 5px;
+}
+
+.workerPost {
+	color: $accent;
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-bottom: 25px;
+	font-family: $title-font;
+	font-weight: bold;
+}
+
+.team-tab__text {
+	p {
+		font-size: 15px;
+		line-height: 1.4em;
+	}
+}
+
+.socialMeatTeam {
+	margin-top: 30px;
+	.social__link {
+		margin-left: 0;
+		margin-right: 30px;
+		font-size: 18px;
+	}
+}
+
+.team-tab__content {
+	display: flex;
+	justify-content: space-between;
+	@include xs-block {
+		flex-wrap: wrap;
+	}
+}
+
+.team-tab__text,
+.skils__wrapper {
+	width: 50%;
+	@include xs-block {
+		width: 100%;
+	}
+}
+
+.team-tab__text {
+	padding-right: 30px;
+	@include xs-block {
+		margin-bottom: 30px;
+	}
+}
+
+.team-active {
+	opacity: 1;
+}
+
+.team-tab__tab {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.skils {
+	margin-bottom: 40px;
+}
+
+.skils__header {
+	font-size: 14px;
+	line-height: 1.6em;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: $title-font;
+	margin-bottom: 15px;
+}
+.skils__bar {
+	width: 100%;
+	background: #dbdcdd;
+	height: 10px;
+	position: relative;
+}
+
+.skils__progress {
+	background: $accent;
+	height: 10px;
+}
+
+.skils__width-80 {
+	width: 80%;
+}
+.skils__width-86 {
+	width: 86%;
+}
+
+.skils__width-90 {
+	width: 90%;
+}
+
+
+.skils__percent {
+	position: absolute;
+	color: $accent;
+	top: -35px;
+	background: #2c333d;
+	padding: 5px;
+	font-size: 11px;
+	border-radius: 5px 5px 5px 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -7px;
+		left: 0;
+		height: 0;
+		width: 0;
+		border-top: 7px solid #2c333d; 
+		border-right: 7px solid transparent;	
+	} 
+}
+
+.skils__percent-80 {
+	left: 80%;
+}
+
+.skils__percent-86 {
+	left: 86%;
+}
+
+.skils__percent-90 {
+	left: 90%;
+}

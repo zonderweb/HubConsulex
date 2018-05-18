@@ -1,0 +1,139 @@
+.news {
+	padding-top: 114px;
+	padding-bottom: 125px;
+	@include md-block {
+		padding-bottom: 95px;
+	}
+
+
+	&__grid {
+		@include row-flex();
+		justify-content: center;
+	}
+
+	&__item {
+		@include col();
+		@include size(4);
+		@include size-md(6);
+		@include md-block {
+			margin-bottom: 30px;
+		}
+		@include size-sm(12);
+
+		border: 1px solid #f2f2f2;
+	}
+
+	&__header {
+		height: 0;
+		background-size: cover;
+		padding-top: 63%;
+	}
+
+	&__body {
+		padding: 25px;
+	}
+
+	&__info {
+		font-size: 12px;
+		line-height: 30px;
+		text-transform: uppercase;
+		font-family: $title-font;
+		color: $accent;
+		font-weight: bold;
+		margin-bottom: 5px;
+
+		span {
+			padding-left: 13px;
+			padding-right: 13px;
+			position: relative;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				background: $accent;
+				width: 1px;
+				height: 100%;
+				right: 0;
+				bottom: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: 30px;
+		position: relative;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-family: $title-font;
+		margin-bottom: 35px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 25px;
+			height: 2px;
+			background: $accent;
+		}
+
+	}
+
+	&__link {
+		color: #2c333d;
+		font-weight: bold;
+
+		&:hover {
+			text-decoration: none;
+			color: #2c333d;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 25px;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px;
+		border-top: 1px solid #f2f2f2;
+		color: #989898;
+	}
+
+	&__learnmore {
+		color: #989898;
+		padding: 5px 15px;
+		border: 1px solid #d5d7d8;
+		border-radius: 30px;
+		font-size: 13px;
+
+		&:hover {
+			background: $accent;
+			color: $white;
+			border: 1px solid $accent;
+			text-decoration: none;
+		}
+	}
+
+	&__like {
+		span {
+			margin-left: 15px;
+			font-size: 14px;
+		}
+	}
+}

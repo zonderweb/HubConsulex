@@ -1,0 +1,91 @@
+.slider {
+	margin-bottom: 140px;
+}
+.slides {
+	position: relative;
+}
+
+.arrow-next,
+.arrow-prew {
+	position: absolute;
+	background: #bebfc3;
+	padding: 10px 15px;
+	right: 13px;
+	cursor: pointer;
+	color: $white;
+
+	i {
+		font-size: 26px;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background: #898a8d;
+		i {
+			color: $accent;
+		}
+	}
+}
+
+.arrow-next {
+	top: 45%;
+}
+
+.arrow-prew {
+	top: 52%;
+}
+
+.slide {
+	background: url(../img/slide__bg_1.jpg) center top;
+	background-size: cover;
+	width: 100%;
+	height: 678px;
+
+	&__vcenter {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__text-block {
+		max-width: 51%;
+	}
+
+	&__title {
+		font-size: 48px;
+		line-height: 1.2em;
+		font-family: $title-font;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $header;
+		margin-bottom: 20px;
+
+		span {
+			color: $accent;
+		}
+	}
+
+	&__description {
+		line-height: 1.2em;
+		text-transform: uppercase;
+		color: $header;
+		margin-bottom: 30px;
+	}
+
+	&__link {
+		background: $accent;
+		color: $white;
+		padding: 20px 40px;
+		display: inline-block;
+		border-radius: 50px;
+		text-transform: uppercase;
+		font-family: $title-font;
+		line-height: 16px;
+		font-weight: bold;
+
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}

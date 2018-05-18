@@ -1,0 +1,146 @@
+// top header
+.headerLogo {
+	color: $header;
+	font-family: $logo-font;
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: -0.045em;
+
+	&:hover {
+		color: #3f4b5a;
+		text-decoration: none;
+	}
+}
+.imgLogo {
+	margin-right: 5px;
+}
+
+.headerTop {
+	display: flex;
+	justify-content: space-between;
+	min-height: 100px;
+	align-items: center;
+}
+.timeHeader,
+.phoneHeader {
+	display: inline-block;
+	font-family: $title-font;
+	font-size: 14px;
+	color: $header;
+	font-weight: bold;
+}
+
+.timeIco,
+.phoneIco,
+.timeWrapper,
+.phoneWrapper {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.timeHeader {
+	margin-right: 80px;
+}
+
+.timeWrapper,
+.phoneWrapper {
+	margin-left: 20px;
+}
+
+.dayOff,
+.phoneDescr {
+	color: $accent;
+}
+
+// bottom header
+
+.headerBottom {
+	border-top: 1px solid #e4e4e4;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 55px;
+	}
+}
+
+// menu
+.nav {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		margin-right: 8px;
+	}
+
+	&__link {
+		text-transform: uppercase;
+		font-family: $title-font;
+		font-size: 14px;
+		color: $header;
+		font-weight: bold;
+		padding: 20px 15px 20px 22px;
+		&:hover {
+			color: $accent;
+			text-decoration: none;
+		}
+	}
+
+	&__link--active {
+		position: relative;
+		color: $accent;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 2px;
+			right: 0;
+			height: 3px;
+			width: 100%;
+			background: $accent;
+		}
+	}
+}
+
+
+// search block
+
+.search {
+	margin-right: auto;
+
+	&__btn {
+		color: $header;
+		&:hover {
+			color: $header;
+		}
+	}
+}
+
+// social block
+.socialBlock {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.social {
+	&__item {
+		display: inline-block;
+	}
+
+	&__link {
+		color: $maingrey;
+		margin-left: 24px;
+		font-size: 14px;
+
+		&:hover {
+			color: $accent;
+			text-decoration: none;
+		}
+	}
+}

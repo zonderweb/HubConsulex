@@ -1,0 +1,10 @@
+@import "_mixins/font-face";
+
+@include font-face("josefinsans", "../fonts/JosefinSansRegular/JosefinSansRegular");
+@include font-face("josefinsans", "../fonts/JosefinSansBold/JosefinSansBold", bold);
+
+@include font-face("poppins", "../fonts/PoppinsRegular/PoppinsRegular");
+@include font-face("poppins", "../fonts/PoppinsBold/PoppinsBold", bold);
+
+@include font-face("comfortaa", "../fonts/ComfortaaRegular/ComfortaaRegular");
+@include font-face("comfortaa", "../fonts/ComfortaaBold/ComfortaaBold", bold);

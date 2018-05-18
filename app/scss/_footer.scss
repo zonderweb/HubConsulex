@@ -1,0 +1,153 @@
+.footer {
+	background: #2c3035;
+	padding-top: 140px;
+	color: $footer;
+
+	&__wrapper {
+		@include row-flex();
+		justify-content: center;
+	}
+
+	&__item {
+		@include col();
+		@include size(3);
+		@include size-md(6);
+		@include md-block {
+			margin-bottom: 30px;
+		}
+		@include size-sm(12);
+		
+		p {
+			font-size: 13px;
+			line-height: 24px;
+		}
+	}
+
+	&__title {
+		font-family: $title-font;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 60px;
+		@include sm-block {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__adress {
+		font-size: 13px;
+		display: block;
+		line-height: 24px;
+
+		i {
+			margin-right: 10px;
+			color: $accent;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list--item {
+		margin-bottom: 10px;
+		font-size: 12px;
+		line-height: 25px;
+	}
+
+	&__link {
+		color: $footer;
+		text-decoration: none;
+
+		&:hover {
+			color: $accent;
+			text-decoration: none;
+		}
+
+		&::before {
+			content: '\f0da';
+			font-family: $ico-font;
+			margin-right: 10px;
+		}
+	}
+
+	&__bottom {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border-top: 1px solid #3d4045;
+		color: #8e9398;
+	}
+}
+
+.us__link {
+	padding-left: 18px;
+}
+
+.latest-post {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 12px;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.lPost__img {
+	margin-right: 10px;
+}
+
+.lPost__body {
+	span {
+		display: block;
+	}
+}
+
+.lPost {
+	&__text {
+		font-size: 12px;
+		line-height: 25px;
+		color: #d3cece;
+	}
+
+	&__date {
+		font-size: 10px;
+		line-height: 20px;
+		color: #98a0a9;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: $title-font;
+	}
+}
+
+.mini-gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@include md-block {
+		justify-content: center;
+	}
+
+	&__link {
+		display: block;
+		margin-bottom: 8px;
+	}
+}
+
+.footer__bottom {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__copyright {
+	font-size: 14px;
+	font-weight: 100;
+
+	i {
+		margin-right: 10px;
+	}
+	a {
+		color: #8e9398;
+	}
+}

@@ -1,0 +1,42 @@
+.vision {
+	padding-top: 120px;
+	padding-bottom: 105px;
+
+	&__text-block {
+		display: flex;
+		justify-content: space-between;
+		@include sm-block {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.text__left {
+	padding-right: 35px;
+}
+
+.text__left,
+.text__right {
+	width: 50%;
+	font-size: 14px;
+	line-height: 24px;
+	@include sm-block {
+		width: 100%;
+		padding-right: 10px;
+	}
+}
+
+.big-letter {
+	display: flex;
+	align-items: center;
+	span {
+		font-size: 48px;
+		line-height: 48px;
+		background: $accent;
+		color: $white;
+		padding: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-right: 10px;
+	}
+}

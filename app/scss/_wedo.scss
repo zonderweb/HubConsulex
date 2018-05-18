@@ -1,0 +1,111 @@
+.wedo {
+	&__header {
+		text-align: center;
+		max-width: 57%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 30px;
+		position: relative;
+		margin-bottom: 90px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			height: 2px;
+			left: 50%;
+			background: $accent;
+			width: 30px;
+			margin-left: -15px;
+		}
+	}
+
+	&__description {
+		font-size: 14px;
+		line-height: 1.8em;
+	}
+}
+
+.h1 {
+	font-size: 37px;
+	line-height: 1.2em;
+	font-family: $title-font;
+	text-transform: uppercase;
+	color: $header;
+}
+
+// items
+
+.wedo {
+	&__container {
+		@include row-flex;
+		justify-content: center;
+	}
+
+	&__item {
+		@include col();
+		@include size(4);
+		@include size-md(6);
+		@include size-xs(12);
+
+		margin-bottom: 75px;
+		@include xs-block {
+			margin-bottom: 50px;
+			text-align: center;
+		}
+	}
+}
+
+.wedo__ico,
+.wedo__text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.wedo__ico {
+	width: 10%;
+	@include xs-block {
+		text-align: center;
+	}
+}
+
+.wedo__text {
+	width: 70%;
+	margin-left: 8%;
+	padding-left: 8%;
+	border-left: 1px solid #e5e5e5;
+
+	@include xs-block {
+		margin-left: 4%;
+		text-align: left;
+	}
+}
+
+.h3 {
+	color: $header;
+	font-family: $title-font;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-bottom: 10px;
+	font-size: 16px;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.wedo__text {
+	p {
+		font-size: 14px;
+		line-height: 1.6em;
+		margin-bottom: 0;
+	}
+}
+
+.wedo__item:hover {
+	.wedo__text {
+		h3 {
+			color: $accent;
+		}
+	}
+}

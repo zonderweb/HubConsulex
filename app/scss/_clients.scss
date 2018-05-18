@@ -1,0 +1,37 @@
+.clients {
+	background: #f4f4f4;
+	padding: 110px 0;
+	@include sm-block {
+		padding: 55px 0 25px 0;
+	}
+
+	&__grid {
+		@include row-flex();
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		@include col();
+		@include size(2);
+		@include size-md(3);
+		@include size-xs(6);
+		border: 1px solid #eaeaea;
+		max-height: 90px;
+		overflow: hidden;
+		text-align: center;
+		background: $white;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		@include md-block {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__logo {
+	  height: 90px;
+	}
+}

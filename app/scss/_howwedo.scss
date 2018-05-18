@@ -1,0 +1,114 @@
+.howwedo__wrapper {
+	padding-top: 125px;
+	padding-bottom: 140px;
+}
+
+.howwedo__grid {
+	@include row-flex;
+	justify-content: center;
+}
+
+.howwedo {
+	&__left {
+		@include col();
+		@include size(4);
+
+		@include sm-block {
+			display: none;
+		}
+	}
+
+	&__right {
+		@include size(8);
+		padding-left: 45px;
+		@include size-sm(12);
+		@include sm-block {
+			padding-left: 0;
+		}
+	}
+}
+
+.howwedo__bg {
+	width: 100%;
+}
+
+//TABS
+.h-wrapper {
+	display: flex;
+	justify-content: ccenter;
+	border: 1px solid #eaeaea;
+}
+
+.horizontal-tabs {
+	background: #f2f2f2;
+}
+
+.horizontal-tab {
+	width: 220px;	
+	font-size: 14px;
+	line-height: 57px;
+	color: $header;
+	cursor: pointer;	
+	text-transform: uppercase;
+	font-family: $title-font;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 1px;
+		background: #e1e1e1;
+		width: 80%;
+		bottom: 0;
+		left: 20px;
+	}
+}
+
+.horizontal-tab:last-child {
+	&::after {
+		display: none;
+	}
+}
+
+.horizontal-content {
+	padding: 35px 35px 25px 35px;
+}
+
+.h-active {
+	color: $accent;
+	background: $white;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 4px;
+		height: 100%;
+		background: $accent;
+		left: -1px;
+		bottom: 0;
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.tabs-title {
+	display: block;
+	font-family: $title-font;
+	font-size: 22px;
+	line-height: 57px;
+	font-weight: bold;
+	color: $header;
+}
+
+.content-item {
+	p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}

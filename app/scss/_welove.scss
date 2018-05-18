@@ -1,0 +1,117 @@
+.welove {
+	padding-top: 125px;
+	padding-bottom: 105px;
+	background:url(../img/welove_bg.jpg) center top;
+	background-size: cover;
+	position: relative;
+	color: $white;
+}
+
+.welowe__header {
+	max-width: 70%;
+}
+
+.h1__white {
+	color: $white;
+}
+
+// TWEET SLIDER
+
+.tweet__slide {
+	@include row-flex();
+	justify-content: center;
+	margin-bottom: 50px;
+	@include sm-block {
+		margin-bottom: 0;
+	}
+	position: relative;
+
+	&--prew,
+	&--next {
+		position: absolute;
+		left: 50%;
+		background: #000;
+		opacity: .25;
+		padding: 5px 10px;
+		cursor: pointer;
+		font-size: 16px;
+		font-weight: bold;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	&--prew {
+		margin-left: -32px;
+	}
+}
+
+
+
+.tweet__item {
+	@include col();
+	@include size(6);
+	@include size-sm(12);
+	@include sm-block {
+		margin-bottom: 40px;
+	}
+}
+
+.tweet__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.user__img {
+	position: relative;
+	margin-right: 20px;
+
+	&::after {
+		content: '\f10d';
+		font-family: $ico-font;
+		position: absolute;
+		color: $accent;
+		top: 0;
+		right: 0;
+		background: #232529;
+		padding: 10px;
+		border-radius: 35px;
+	}
+}
+
+.user__avatar {
+	border-radius: 50%;
+}
+
+.tweet__text {
+	line-height: 24px;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 15px;
+		left: 0;
+		bottom: 0;
+		background: $accent;
+		height: 1px;
+	} 
+}
+
+.user__name {
+	font-family: $title-font;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.user__position {
+	color: $accent;
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 24px;
+}

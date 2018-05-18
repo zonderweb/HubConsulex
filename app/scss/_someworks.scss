@@ -1,0 +1,103 @@
+.someworks {
+	background: #f4f4f4;
+	padding: 140px 0px;
+
+	&__header {
+		margin-bottom: 80px;
+	}
+}
+
+.gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: stretch;
+
+	&__item {
+		//max-width: 25%;
+		height: 247px;
+		position: relative;
+		@include xs-block {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__pic {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.gallery {
+
+	&__hover {
+		background: #2c333d;
+		opacity: .89;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__text {
+		position: absolute;
+		left: 25px;
+		bottom: 25px;
+
+		span {
+			display: block;
+		}
+	}
+
+	&__title {
+		color: $white;
+		font-size: 22px;
+		font-family: $title-font;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&__description {
+		font-family: $title-font;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: $accent;
+	}
+
+	&__ico {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		color: $white;
+		background: $accent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 15px;
+	}
+}
+
+.gallery {
+	&__hover,
+	&__text,
+	&__ico {
+		display: none;
+	}
+}
+
+.gallery__item:hover {
+	.gallery__hover,
+	.gallery__text {
+		display: block;
+	}
+}
+
+.gallery__item:hover {
+	.gallery__ico {
+		display: flex;
+	}
+}
