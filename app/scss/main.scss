@@ -32,6 +32,11 @@ body {
 	}
 }
 
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
 .img-responsive {
 	display: block;
 	max-width: 100%;

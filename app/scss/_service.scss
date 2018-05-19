@@ -7,6 +7,8 @@
 	background: $white;
 }
 
+/********** how it work section **********/
+
 .howItWork {
 	padding-top: 135px;
 	padding-bottom: 170px;
@@ -69,5 +71,130 @@
 		i {
 			color: $accent;
 		}
+	}
+}
+
+/********** pricing section **********/
+
+.pricing {
+	background: $white;
+	padding-top: 140px;
+	padding-bottom: 150px;
+	@include xs-block {
+		padding-top: 70px;
+		padding-bottom: 75px;
+	}
+}
+
+.priceTable {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	@include sm-block {
+		flex-wrap: wrap;
+	}
+
+	&__item {
+	 border-top: 5px solid #adb2b8;
+	 width: 30%;
+
+	 @include md-block {
+		 width: 33%;
+	 }
+
+	 @include sm-block {
+		 width: 100%;
+		 margin-bottom: 30px;
+		 margin-left: 15px;
+		 margin-right: 15px;
+	 }
+	}
+
+	&__name {
+		font-size: 22px;
+		text-transform: uppercase;
+		font-family: $title-font;
+		color: #2c333d;
+		font-weight: bold;
+		background: #f2f2f2;
+		padding-top: 45px;
+		padding-bottom: 40px;
+	}
+
+	&__block {
+		border-bottom: 1px solid #e4e4e4;
+	}
+
+	&__list {
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 65px;
+		}
+	}
+
+	&__price {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		span {
+			display: block;
+		}
+	}
+
+	&__link {
+		display: block;
+		background: #d0d3d7;
+		padding-top: 20px;
+		padding-bottom: 17px;
+		color: $white;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: bold;
+		font-family: $title-font;
+		border-radius: 30px;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.price {
+	
+	&__big,
+	&__mini {
+		font-weight: bold;
+		color: #2c333d;
+	}
+
+	&__big {
+		font-size: 60px;
+		font-family: $title-font;
+	}
+
+	&__mini {
+		font-size: 15px;
+		line-height: 45px;
+	}
+}
+
+.pt-wrapper {
+	padding: 60px 45px;
+	@include md-block {
+		padding: 60px 25px;
+	}
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.pt-link__accent {
+	background: $accent;
+}
+
+
+.pt-item__accent {
+	border-top: 5px solid $accent;
+
+	.priceTable__name {
+		background: #fceed7;
 	}
 }
