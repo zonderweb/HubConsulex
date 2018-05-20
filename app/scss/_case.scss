@@ -1,0 +1,125 @@
+.progect {
+	background: $white;
+	padding-top: 120px;
+	padding-bottom: 105px;
+
+	.wedo__header {
+		@include sm-block {
+			margin-bottom: 40px;
+		}
+	}
+
+	.gallery {
+		margin-bottom: 105px;
+	}
+}
+
+/********** We doen awesome project **********/
+
+.gallery-nav {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 95px;
+	@include sm-block {
+		margin-bottom: 20px;
+	}	
+
+	&__nav {
+		margin: 0;
+		padding: 0;
+		list-style: none;	
+		border-bottom: 1px solid #e8e8e8;
+		display: inline-block;
+		
+		@include sm-block {
+			border-bottom: none;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		text-transform: uppercase;
+		color: #bebebe;
+		font-family: $title-font; 
+		font-weight: bold;	
+		font-size: 14px;	
+		@include sm-block {
+			display: block;
+		}	
+	}
+
+	&__link {
+		margin-bottom: 15px;
+		padding: 0 45px;
+		display: block;
+		border-right: 1px solid #eee;
+		color: #bebebe;
+
+		@include md-block {
+			padding: 0 20px;
+		}
+
+		@include sm-block {
+			border-right: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		&:hover {
+			color: #a5a5a5;
+		}		
+	}
+}
+
+.gallery-nav__list:first-child {
+	.gallery-nav__link {
+			padding-left: 0;
+			@include sm-block {
+				padding-left: 20px;
+			}
+	}
+}
+
+.gallery-nav__list:last-child {
+	.gallery-nav__link {
+		padding-right: 0;
+		border-right: none;
+		@include sm-block {
+			padding-left: 20px;
+		}
+	}
+}
+
+.gallery-nav__active {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: $accent;
+	}
+}
+
+.loadMore__wrapper {
+	text-align: center;
+}
+
+.loadMore__link {
+	display: inline-block;
+	text-align: center;
+	background: $accent;
+	padding: 20px 50px 16px 50px; 
+	color: $white;
+	text-transform: uppercase;
+	font-family: $title-font;
+	font-weight: bold;
+	line-height: 1.2em;
+	border-radius: 30px;
+	
+	&:hover {
+		color: $white;
+	}
+}
