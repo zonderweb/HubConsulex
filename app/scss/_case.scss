@@ -118,8 +118,45 @@
 	font-weight: bold;
 	line-height: 1.2em;
 	border-radius: 30px;
-	
+
 	&:hover {
 		color: $white;
+	}
+}
+
+/***** Stat Total *****/
+.case__wrapper {
+	padding-bottom: 0;
+}
+
+.howwedo-case__grid {
+	margin-bottom: 120px;
+}
+
+.special-case__body {
+	max-width: none;
+}
+
+.special-case__item {
+	width: 21%;
+	@include bmd-block {
+		width: 50%;
+		text-align: center;
+	}
+
+	@include xs-block {
+		width: 100%;
+	}
+}
+
+.special-case__img {
+	img {
+		opacity: .4;
+	}
+}
+
+.special-case__text {
+	.special__namber {
+		color: #2c333d;
 	}
 }
