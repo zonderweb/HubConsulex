@@ -1,0 +1,152 @@
+.caseContent {
+	padding-top: 124px;
+	padding-bottom: 140px;
+	@include xs-block {
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+}
+
+.caseSlider {
+	position: relative;
+	margin-bottom: 115px;
+	@include xs-block {
+		margin-bottom: 50px;
+	}
+}
+
+.caseSlide {
+	&__next,
+	&__prew {
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+		background: #232527;
+		opacity: .24;
+		font-size: 30px;
+		line-height: 30px;
+		color: $white;
+		padding: 4px 15px;
+		cursor: pointer;
+
+		&:hover {
+			color: $accent;
+			opacity: .7;
+		}
+	}
+
+	&__next {
+		right: 6px;
+	}
+
+	&__prew {
+		left: 6px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+// CASE CONTENT
+.caseContent {
+	
+	&-top {
+		@include row-flex;
+		justify-content: center;
+	}
+
+	&-right {
+		@include col();
+		@include size(8);
+		@include size-md(7);
+		@include size-sm(6);
+		@include size-xs(12);
+		@include xs-block {
+			order: 1;
+		}
+	}
+
+	&-left {
+		@include size(4);
+		@include size-sm(6);
+		@include size-xs(12);
+		@include xs-block {
+			order: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		font-size: 37px;
+		color: #2c333d;
+		font-family: $title-font;
+		text-transform: uppercase;
+		position: relative;
+		padding-bottom: 36px;
+		margin-bottom: 41px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			background: $accent;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&__text {
+		padding-right: 47px;
+
+		@include sm-block {
+			padding-right: 20px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+}
+
+.caseContent {
+
+	&__info {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		border: 2px solid $accent;
+		padding: 39px 42px 39px 38px;
+		@include md-block {
+			padding: 20px 22px;
+		}
+	}
+
+	&__list {
+		font-size: 14px;
+		text-transform: uppercase;
+		line-height: 39px;
+		color: #2c333d;
+		@include md-block {
+			line-height: 29px;
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			color: $accent;
+			min-width: 102px;
+			margin-right: 20px;
+			font-weight: bold;
+
+			&::after {
+				content: ':';
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+}
