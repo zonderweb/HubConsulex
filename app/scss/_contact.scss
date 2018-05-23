@@ -1,0 +1,159 @@
+.mainContact {
+	padding-top: 134px;
+	padding-bottom: 154px;
+
+	&__grid {
+		@include row-flex();
+		justify-content: center;
+	}
+
+	&__left,
+	&__right {
+		@include col();
+		@include size(6);
+		@include size-sm(12);
+	}
+
+	&__right {
+		@include sm-block {
+			width: 100%;	// для примера
+			height: 300px; // для примера
+		}
+	}
+
+	&__left {
+		@include sm-block {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.contact-box__row {
+	@include row-flex;
+	justify-content: center;
+	margin-bottom: 44px;
+}
+
+.contact-box__item {
+	@include col();
+	@include size(6);
+	padding-left: 35px;
+}
+
+.contact-box__adress {
+	font-size: 13px;
+	line-height: 1.85em;
+	span {
+		display: block;
+	}
+}
+
+.contact-box {
+	&__header {
+		text-transform: uppercase;
+		font-family: $title-font;
+		font-weight: bold;
+		line-height: 1.2em;
+		margin-bottom: 10px;
+	}
+}
+
+
+.cB-marker {
+	&::before {
+		content: '\f041';
+	}
+}
+
+.cB-mail {
+	&::before {
+		content: '\f003';
+	}
+}
+
+.cB-phone {
+	&::before {
+		content: '\f095';
+	}
+}
+
+.cB-marker,
+.cB-mail,
+.cB-phone {
+	position: relative;
+	&::before {
+		position: absolute;
+		color: $accent;
+		font-size: 24px;
+		font-family: $ico-font;
+		left: 0;
+		top: -10px;
+	}
+}
+
+// Contact Form
+
+.form-title {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #2c3035;
+	font-weight: bold;
+	margin-bottom: 45px;
+}
+
+.grey-dsg {
+	background: #f9f9f9;
+	border: 1px solid #e8e8e8;
+	color: #a9a9a9;
+	padding: 17px;
+	font-size: 13px;
+	line-height: 1.2em;
+	margin-bottom: 29px;
+
+	&::placeholder {
+		color: #a9a9a9;
+	}
+}
+
+.name,
+.lastName {
+	display: inline-block;
+	width: 47%;
+	@include md-block {
+		width: 100%;
+		display: block;
+	}
+}
+
+.name {
+	margin-right: 25px;
+}
+
+.email {
+	display: block;
+	width: 100%;
+}
+
+.textMsg {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.submitBtn {
+	border: none;
+	background: $accent;
+	color: $white;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 17px 51px;
+	border-radius: 30px;
+	font-family: $title-font;
+	cursor: pointer;
+}
+
+// MAP
+.mainContact__right {
+	background: url(../img/map.jpg) center top;
+	background-size: cover;
+}
