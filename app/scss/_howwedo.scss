@@ -37,6 +37,9 @@
 	display: flex;
 	justify-content: ccenter;
 	border: 1px solid #eaeaea;
+	@include xs-block {
+		flex-direction: column;
+	}
 }
 
 .horizontal-tabs {
@@ -65,6 +68,10 @@
 		bottom: 0;
 		left: 20px;
 	}
+	@include xs-block {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .horizontal-tab:last-child {
@@ -83,7 +90,7 @@
 	position: relative;
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		width: 4px;
 		height: 100%;
@@ -94,6 +101,17 @@
 
 	&::after {
 		display: none;
+		@include sm-block {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 100%;
+			background: $accent;
+			left: 100%;
+			bottom: 0;
+			margin-left: -4px;
+		}
 	}
 }
 

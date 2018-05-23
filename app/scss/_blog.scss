@@ -1,0 +1,20 @@
+.mainBlog {
+	padding-top: 125px;
+	padding-bottom: 114px;
+}
+
+.twoColumn-grid	{
+	@include row-flex();
+	justify-content: center;
+}
+
+.mainContent {
+	@include col();
+	@include size(9);
+	padding-right: 38px;
+	border: 1px solid #cdcdcd;
+}
+
+.sidebar {
+	@include size(3);
+}
