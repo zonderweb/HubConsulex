@@ -10,6 +10,9 @@
 		color: #3f4b5a;
 		text-decoration: none;
 	}
+	@include sm-block {
+		margin-bottom: 30px;
+	}
 }
 .imgLogo {
 	margin-right: 5px;
@@ -20,7 +23,18 @@
 	justify-content: space-between;
 	min-height: 100px;
 	align-items: center;
+	@include sm-block {
+		flex-direction: column;
+		justify-content: center;
+	}
 }
+
+.info__wrapper {
+	@include sm-block {
+		margin-bottom: 30px;
+	}
+}
+
 .timeHeader,
 .phoneHeader {
 	display: inline-block;
@@ -28,6 +42,12 @@
 	font-size: 14px;
 	color: $header;
 	font-weight: bold;
+}
+
+.timeHeader {
+	@include xs-block {
+		margin-bottom: 30px;
+	}
 }
 
 .timeIco,
@@ -62,18 +82,30 @@
 		justify-content: space-between;
 		align-items: center;
 		min-height: 55px;
+
+		// @include md-block {
+		// 	flex-wrap: wrap;
+		// }
 	}
 }
 
-// menu
+// MENU
 .nav {
+	@include md-block {
+		display: none;
+	}
+
 	&__list {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
+		@include md-block {
+			flex-wrap: wrap;
+		}
 	}
+
 	&__item {
 		margin-right: 8px;
 	}
@@ -112,6 +144,10 @@
 
 .search {
 	margin-right: auto;
+	@include md-block {
+		margin-right: 0;
+		margin-left: auto;
+	}
 
 	&__btn {
 		color: $header;
@@ -143,4 +179,43 @@
 			text-decoration: none;
 		}
 	}
+}
+
+// Adaptive menu icon
+.g-icon {
+	display: none;
+	width: 35px;
+	height: 25px;
+	position: relative;
+	cursor: pointer;
+	@include md-block {
+		display: block;
+	}
+
+	span {
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background: $maingrey;
+		border-radius: 9px;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 0px;
+		}
+		&:nth-child(2),
+		&:nth-child(3) {
+			top: 13px;
+		}
+		&:nth-child(4) {
+			top: 26px;
+		}
+	}
+}
+
+.nav-open {
+	display: block;
 }

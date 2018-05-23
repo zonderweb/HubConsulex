@@ -1,3 +1,4 @@
+
 $(function() {
 	// TABS Vertical
 		$(".tab_item").not(":first").hide();
@@ -58,3 +59,12 @@ $(".js-acc-header").on("click", function(e) {
   $this.toggleClass("js-active");
   $this.next().slideToggle();
 });
+
+// Adaptive Menu
+// (function($){
+//   $(function() {
+//     $('.g-icon').on('click', function() {
+//       $(this).closest('.nav').toggleClass('nav-open');
+//     });
+//   });
+// })(jQuery);
