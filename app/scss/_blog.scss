@@ -12,9 +12,118 @@
 	@include col();
 	@include size(9);
 	padding-right: 38px;
-	border: 1px solid #cdcdcd;
+	//border: 1px solid #cdcdcd;
 }
 
 .sidebar {
 	@include size(3);
+}
+
+// Blog anounce
+
+.blogPost-item {
+	margin-bottom: 70px;
+}
+
+.favorites-icon {
+	position: relative;
+
+	&::after {
+		content: '\f005';
+		position: absolute;
+		background: $accent;
+		font-family: $ico-font;
+		font-size: 14px;
+		color: $white;
+		padding: 8px 5px 11px 5px;
+		border-radius: 0 0 13px 13px;
+		top: 0;
+		right: 19px;
+	} 
+}
+
+.blogPost-header__link {
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.blogPost-pic {
+	max-width: 100%;
+	height: auto;
+}
+
+.blogPost-body {
+	padding: 33px 59px 46px 22px;
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+
+	p {
+		font-size: 14px;
+		line-height: 25px;
+	}
+}
+
+.blogPost-info {
+	margin-bottom: 13px;
+}
+
+.content-info {
+	font-size: 12px;
+	font-family: $title-font;
+	color: $accent;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-right: 1px solid $accent;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	&:first-child {
+		padding-left: 0px;
+	}
+
+	&:last-child {
+		padding-right: 0px;
+		border-right: none;
+	}
+}
+
+.h2-blog {
+	font-size: 18px;
+}
+
+.blogPost-footer {
+	border: 1px solid #ebebeb;
+	padding: 15px 20px 17px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.blog-lmore__link {
+	color: #989898;
+	font-size: 13px;
+	border: 1px solid #d5d7d8;
+	padding: 8px 17px;
+	border-radius: 18px;
+	font-family: $title-font;
+
+	&:hover {
+		background: $accent;
+		color: $white;
+		border: 1px solid $accent;
+	}
+}
+
+.link-info {
+	font-size: 14px;
+	color: #919191;
+	margin-left: 20px;
+
+	i {
+		margin-right: 6px;
+	}
 }
