@@ -174,3 +174,24 @@
 		max-width: 100%;
 	}
 }
+
+.social-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.sbtn {
+	color: $maingrey;
+	font-size: 18px;
+	width: 39px;
+	height: 39px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background: $accent;
+		color: $white;
+		border-radius: 50%;
+	}
+}
