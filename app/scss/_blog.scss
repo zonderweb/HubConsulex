@@ -197,3 +197,52 @@
 		bottom: 10px;
 	}
 }
+
+// Blog pagination
+
+.pagination {
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		display: inline-block;
+		margin-left: 6px;
+	}
+
+	&__link {
+		display: block;
+		padding: 14px 18px;
+		border: 1px solid #ebebeb;
+		color: #919191;
+
+		&:hover {
+			background: $accent;
+			border: 1px solid $accent;
+			color: $white;
+		}
+	}
+
+	&__link--first,
+	&__link--last {
+		padding: 14px 26px;
+	}
+
+	&__link--first {
+		border-radius: 25px 0px 0px 25px;
+	}
+
+	&__link--last {
+		border-radius: 0px 25px 25px 0px;
+	}
+
+	&__link--active {
+		background: $accent;
+		border: 1px solid $accent;
+		color: $white;
+		font-weight: bold;
+	}
+}
