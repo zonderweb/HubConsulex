@@ -23,6 +23,7 @@
 
 .blogPost-item {
 	margin-bottom: 70px;
+	overflow: hidden;
 }
 
 .favorites-icon {
@@ -60,6 +61,7 @@
 	padding: 33px 59px 46px 22px;
 	border-left: 1px solid #ebebeb;
 	border-right: 1px solid #ebebeb;
+	border-top: 1px solid #ebebeb;
 
 	p {
 		font-size: 14px;
@@ -93,6 +95,10 @@
 
 .h2-blog {
 	font-size: 18px;
+	
+	a {
+		color: $sidebar-title;
+	}
 }
 
 .blogPost-footer {
@@ -125,5 +131,69 @@
 
 	i {
 		margin-right: 6px;
+	}
+}
+
+.blogPost-slider {
+	margin-bottom: 0;
+}
+
+.mosaic {
+	display: flex;
+	justify-content: center;
+	@include sm-block {
+		flex-wrap: wrap;
+	}
+}
+
+.mosaic-left {
+	margin-right: 6px;
+}
+
+.mosaic-right {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.mosaic-right__bottom {
+	display: flex;
+	justify-content: space-between;
+}
+
+.mosaic__link {
+	display: block;
+}
+
+.video-container {
+	background: url(../img/video_blog_bg.jpg) center top;
+	background-size: cover;
+	height: 415px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.blogPost-quote {
+	background: #ffefd5;
+	padding: 75px 25px 80px 99px;
+}
+
+.quote__blog {
+	font-family: $title-font;
+	font-size: 20px;
+	font-style: italic;
+	line-height: 30px;
+	position: relative;
+
+	&::before {
+		content: '\f10d';
+		position: absolute;
+		font-size: 60px;
+		color: #f4c67c;
+		font-family: $ico-font;
+		font-style: normal;
+		left: -70px;
+		bottom: 10px;
 	}
 }
