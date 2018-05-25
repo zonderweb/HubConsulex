@@ -11,12 +11,17 @@
 .mainContent {
 	@include col();
 	@include size(9);
+	@include size-sm(12);
 	padding-right: 38px;
-	//border: 1px solid #cdcdcd;
+	@include sm-block {
+		padding-right: 0;
+		margin-bottom: 40px;
+	}
 }
 
 .sidebar {
 	@include size(3);
+	@include size-sm(12);
 }
 
 // Blog anounce
@@ -141,7 +146,7 @@
 .mosaic {
 	display: flex;
 	justify-content: center;
-	@include sm-block {
+	@include xxs-block {
 		flex-wrap: wrap;
 	}
 }
@@ -211,6 +216,9 @@
 	&__item {
 		display: inline-block;
 		margin-left: 6px;
+		@include xs-block {
+		 margin-bottom: 20px;
+		}
 	}
 
 	&__link {
