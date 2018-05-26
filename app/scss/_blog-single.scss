@@ -13,6 +13,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 84px;
 }
 
 .direction__prew,
@@ -60,5 +61,42 @@
 		position: absolute;
 		right: 18px;
 		bottom: 11px;
+	}
+}
+
+.autor-info {
+	p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+
+.autor-block {
+	border: 1px solid #f2f2f2;
+	display: flex;
+	justify-content: space-between;
+	padding: 14px 50px 19px 17px;
+}
+
+.autor-avatar {
+	margin-right: 30px;
+
+	img {
+		border-radius: 50%;
+	}
+}
+.autor__name {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 30px;
+	color: #202020;
+	font-family: $title-font;
+}
+
+.ml-none {
+	.social__link {
+		margin-left: 0px;
+		margin-right: 24px;
 	}
 }
