@@ -127,10 +127,19 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 114px;
+	@include xs-block {
+		flex-wrap: wrap;
+		justify-content: center;
+	} 
 }
 
 .ralatedPost-item {
 	margin-right: 23px;
+	margin-bottom: 30px;
+	@include xs-block {
+		margin-right: 0;
+		width: 100%;
+	}
 	&:last-child {
 		margin-right: 0;
 	}
@@ -138,7 +147,7 @@
 
 .relatedPost__img {
 	img {
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 	}
 }
@@ -170,15 +179,25 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 33px;
+	@include xs-block {
+		flex-wrap: wrap;
+	}
 }
 
 .c-name,
 .c-email {
 	width: 50%;
+	@include xs-block {
+		width: 100%;
+	}
 }
 
 .c-name {
 	margin-right: 30px;
+	@include xs-block {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
 }
 
 .c-text {
