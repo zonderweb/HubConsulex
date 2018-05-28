@@ -209,4 +209,41 @@
 	color: $white;
 	background: $accent;
 	border-radius: 26px;
+	cursor: pointer;
+}
+
+.form-comments {
+	margin-bottom: 103px;
+}
+
+.comments-box {
+	border: 1px solid #f2f2f2;
+	padding: 0px 25px 29px 25px;
+	margin-bottom: 47px;
+}
+
+.comments-body {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #f2f2f2;
+	padding-bottom: 35px;
+	padding-top: 29px;
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.comments-body__replay {
+	padding-left: 70px;
+}
+
+.link__replay {
+	font-size: 10px;
+	padding: 10px 30px 8px 30px;
+	text-transform: uppercase;
+	font-family: $title-font;
+	color: #989898;
+	border: 1px solid #d5d7d8;
+	border-radius: 18px;
 }
