@@ -126,6 +126,7 @@
 .relatedPost__wrapper {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 114px;
 }
 
 .ralatedPost-item {
@@ -163,4 +164,49 @@
 	a {
 		color: #2c333d;		
 	}
+}
+
+.intput-c__wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 33px;
+}
+
+.c-name,
+.c-email {
+	width: 50%;
+}
+
+.c-name {
+	margin-right: 30px;
+}
+
+.c-text {
+	margin-bottom: 55px;
+}
+
+.grey_bg_inpt {
+	background: #f9f9f9;
+	border: 1px solid #f4f4f4;
+	padding: 18px;
+	font-size: 13px;
+	color: #939292;
+
+	&::placeholder {
+		color: #939292;
+	}
+}
+
+.c-text {
+	width: 100%;
+}
+
+.c-btn-sbm {
+	text-transform: uppercase;
+	font-family: $title-font;
+	padding: 17px 52px 14px 52px;
+	border: none;
+	color: $white;
+	background: $accent;
+	border-radius: 26px;
 }
